@@ -1,10 +1,13 @@
 import Hero from "./Hero";
+import Map from "./Map";
+import Statistic from "./Statistic";
 
 const Home = () => {
   return (
     <div>
       <Hero />
-      <h1>Anasayfa</h1>
+      <Statistic />
+      <Map />
     </div>
   );
 };

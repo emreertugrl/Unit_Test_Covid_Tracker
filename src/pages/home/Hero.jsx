@@ -4,7 +4,7 @@ import Container from "../../components/container";
 const Hero = () => {
   return (
     <div className="bg-blue-900 text-white ">
-      <Container design="py-10 md:py-20 grid md:grid-cols-2 h-full   ">
+      <Container design="py-10 pb-16 md:pt-[100px] md:pb-[120px] grid md:grid-cols-2 h-full   ">
         <div className="flex flex-col gap-5 md:gap-10">
           <h1 className="text-4xl">COVID-19 CANLI TAKİP</h1>
 
