@@ -5,7 +5,7 @@ import { PiVirus } from "react-icons/pi";
 
 const Header = () => {
   return (
-    <div className="border bg-blue-900 text-white">
+    <div className="border-b bg-blue-900 text-white">
       <Container design="flex justify-between items-center ">
         <Link to="/" className="flex gap-3 items-center">
           <PiVirus className="text-4xl text-red-600" />
