@@ -3,7 +3,7 @@ import { PiVirus } from "react-icons/pi";
 const Item = ({ color, text, value }) => {
   return (
     <div className="flex gap-3">
-      <PiVirus className={`${color} text-2xl md:text-5xl `} />
+      <PiVirus data-testid="svg" className={`${color} text-2xl md:text-5xl `} />
       <div>
         <span className="text-gray-500 text-xs lg:text-sm max-md:hidden">
           {text}
