@@ -19,7 +19,7 @@ const Statistic = () => {
   return (
     <Container design={"!py-0 "}>
       <div className="bg-white shadow-lg rounded-xl p-5 grid grid-cols-3 gap-5 mt-[-42px] md:mt-[-60px]">
-        {true ? (
+        {isLoading ? (
           <HomeLoader />
         ) : (
           <>
