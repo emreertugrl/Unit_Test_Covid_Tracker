@@ -3,7 +3,7 @@ import Container from "../../components/container";
 import Item from "./Item";
 import api from "./../../api/index";
 import millify from "millify";
-import HomeLoader from "../../loaders/HomeLoader";
+import HomeLoader from "../../components/loaders/HomeLoader";
 
 const Statistic = () => {
   const [isLoading, setLoading] = useState(true);
