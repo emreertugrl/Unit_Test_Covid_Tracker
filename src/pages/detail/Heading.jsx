@@ -1,6 +1,4 @@
 import { useSelector } from "react-redux";
-import DetailLoader from "../../components/loaders/DetailLoader";
-import Error from "../../components/error";
 import { Link } from "react-router-dom";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import HeaderLoader from "./../../components/loaders/HeaderLoader";
