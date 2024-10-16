@@ -13,8 +13,8 @@ const Detail = () => {
     dispatch(getDetails(code));
   }, []);
   return (
-    <div className="flex-1 text-white grid place-items-center p-6">
-      <div className="bg-white border shadow-2xl min-h-[80%] py-6 px-8 rounded-lg max-w-3xl max-md:w-full md:min-w-[500px]">
+    <div className="flex-1 text-white grid place-items-center p-6 ">
+      <div className="bg-white border shadow-2xl min-h-[80%] py-6 px-8 rounded-lg max-w-3xl max-md:w-full md:min-w-[600px]">
         <Heading />
         <Content />
       </div>
