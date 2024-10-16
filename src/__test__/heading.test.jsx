@@ -5,6 +5,8 @@ import { Provider } from "react-redux";
 import configureStore from "redux-mock-store"; //ES6 modules
 import { thunk } from "redux-thunk";
 import { BrowserRouter } from "react-router-dom";
+import { data } from "./../constants";
+
 const mockStore = configureStore([thunk]);
 
 it("Store yüklenme durumundayken ekrana loader basılır.", () => {
@@ -45,6 +47,35 @@ it("Store'da yüklenme bittiğinde ekranda loader yoktur.", () => {
   expect(ele).toBeNull();
 });
 
-it("Store'a veri geldiğinde ekrana veriler  basılır.", () => {
-  //   render(<Heading />);
+it("Store'a veri geldiğinde ekrana veriler basılır.", () => {
+  // store'un veri geldiği senaryodaki halinin sahtesini oluştur
+
+  const store = mockStore({
+    covidSlice: {
+      isLoading: false,
+      error: null,
+      data,
+    },
+  });
+
+  // test edilecek bileşeni render'la
+  render(
+    <Provider store={store}>
+      <BrowserRouter>
+        <Heading />
+      </BrowserRouter>
+    </Provider>
+  );
+
+  // ülke ismi ekrana geldi mi
+  screen.getByRole("heading", { name: data.country });
+
+  // ülke kısmının kodu ekrana geldi mi
+  const flagImg = screen.getByAltText("flag");
+
+  // Bayrağın kaynağı doğru mu ?
+  expect(flagImg).toHaveAttribute(
+    "src",
+    `https://flagsapi.com/${data.code}/flat/64.png`
+  );
 });

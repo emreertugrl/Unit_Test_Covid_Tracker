@@ -24,7 +24,7 @@ const Heading = () => {
             </h1>
             <div className="w-[64px] h-[40px] rounded-lg   overflow-hidden flex items-center p-0 drop-shadow-[0_0_10px_rgba(0,0,0,0.5)]">
               <img
-                src={`https://flagsapi.com/${data?.code}/flat/64.png`}
+                src={`https://flagsapi.com/${data.code}/flat/64.png`}
                 alt="flag"
               />
             </div>
